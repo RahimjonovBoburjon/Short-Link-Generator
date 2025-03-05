@@ -1,7 +1,8 @@
 <template>
-    <div class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md transform transition-all hover:scale-105">
+    <div
+        class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md transform transition-all hover:scale-105 font-poppins">
         <input v-model="longUrl" type="text" placeholder="Enter your long URL"
-            class="w-full p-3 border-2 border-gray-200 rounded-lg mb-6 focus:border-blue-500 focus:outline-none transition-colors" />
+            class="w-full p-3 border-2 border-gray-200 rounded-lg mb-6 focus:border-blue-500 focus:outline-none transition-colors placeholder-gray-400" />
         <button @click="shortenUrl"
             class="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all">
             Shorten URL
