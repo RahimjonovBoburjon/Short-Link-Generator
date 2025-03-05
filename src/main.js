@@ -3,6 +3,7 @@ import App from './App.vue';
 import './assets/main.css';
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
+import router from './router';
 
 const firebaseConfig = {
     apiKey: "AIzaSyCwpHMCjpPAYusMNKSunLyF8tbrnWyimh4",
@@ -18,4 +19,5 @@ const db = getFirestore(firebaseApp);
 
 const app = createApp(App);
 app.provide('db', db);
+app.use(router);
 app.mount('#app');

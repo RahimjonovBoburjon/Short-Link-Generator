@@ -3,8 +3,8 @@ import App from './App.vue';
 import Redirect from './components/Redirect.vue';
 
 const routes = [
-    { path: '/', component: App },
     { path: '/:shortId', component: Redirect },
+    { path: '/', component: App },
 ];
 
 const router = createRouter({

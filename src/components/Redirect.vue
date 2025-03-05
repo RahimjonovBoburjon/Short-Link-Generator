@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import { onMounted } from 'vue';
-import { useRoute } from 'vue-router';
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { onMounted } from "vue";
+import { useRoute } from "vue-router";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 export default {
     setup() {
@@ -15,21 +15,21 @@ export default {
         const db = getFirestore();
 
         onMounted(async () => {
-            const querySnapshot = await getDocs(collection(db, 'shortLinks'));
+            const querySnapshot = await getDocs(collection(db, "shortLinks"));
             let foundUrl = null;
-            querySnapshot.forEach(doc => {
+
+            querySnapshot.forEach((doc) => {
                 if (doc.data().shortId === route.params.shortId) {
                     foundUrl = doc.data().longUrl;
                 }
             });
+
             if (foundUrl) {
-                window.location.href = foundUrl;
+                window.location.replace(foundUrl);
             } else {
-                alert('Short link not found!');
+                alert("Short link not found!");
             }
         });
-    }
+    },
 };
 </script>
-
-<style scoped></style>
