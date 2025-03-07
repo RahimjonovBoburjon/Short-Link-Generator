@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="min-h-screen flex items-center justify-center bg-gray-100">
         <p class="text-xl font-semibold">Redirecting...</p>
     </div>
@@ -28,4 +28,4 @@ export default {
         });
     },
 };
-</script>
+</script> -->
