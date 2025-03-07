@@ -1,7 +1,8 @@
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-50 to-purple-50 p-4">
     <h1 class="text-4xl text-center font-bold mb-8 text-gray-800 animate-text-pop font-poppins">Short Link Generator</h1>
-    <ShortenLink />
+    <!-- <ShortenLink /> -->
+    <RouterView />
 
     <footer
       class="bg-gradient-to-br from-blue-800 to-purple-800 text-white text-lg py-4 fixed bottom-0 left-0 right-0 shadow-lg rounded-t-lg backdrop-blur-md bg-opacity-90 animate-fade-in border-t border-x border-blue-400">
@@ -16,6 +17,7 @@
 </template>
 
 <script>
+import { RouterView } from 'vue-router';
 import ShortenLink from './components/ShortenLink.vue';
 
 export default {

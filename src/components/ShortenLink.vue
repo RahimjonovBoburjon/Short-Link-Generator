@@ -19,13 +19,13 @@
 
 <script>
 import { ref, inject } from 'vue';
-import { collection, addDoc } from 'firebase/firestore';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 export default {
     setup() {
         const longUrl = ref('');
         const shortUrl = ref('');
-        const db = inject('db');
+        const db = getFirestore();
 
         const shortenUrl = async () => {
             if (!longUrl.value) return;
